@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="算法笔记," />
 
 
 
@@ -79,11 +79,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="MX蒟蒻的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="bfs，广度优先搜索，也叫宽搜，如其名，他是由宽度进行搜索（即每次都尝试访问同一层的节点。 一层访问完了，就访问下一层。）一般为二叉树的模型进行搜索，一般将起点压入一个队列中，对它所能触及的点进行判断是否合法，如果合法，记录为已访问过了（一般由bool数组vis[]进行记录）直到找到了我们所要访问的点，或整棵树全部查找完，未发现所要查找的点，结束。由于bfs题目的多样，无法给出模板，直接看题！洛谷">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bfs笔记">
+<meta property="og:url" content="http://yoursite.com/2020/04/24/bfs%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="MX蒟蒻的博客">
+<meta property="og:description" content="bfs，广度优先搜索，也叫宽搜，如其名，他是由宽度进行搜索（即每次都尝试访问同一层的节点。 一层访问完了，就访问下一层。）一般为二叉树的模型进行搜索，一般将起点压入一个队列中，对它所能触及的点进行判断是否合法，如果合法，记录为已访问过了（一般由bool数组vis[]进行记录）直到找到了我们所要访问的点，或整棵树全部查找完，未发现所要查找的点，结束。由于bfs题目的多样，无法给出模板，直接看题！洛谷">
+<meta property="article:published_time" content="2020-04-24T11:25:55.000Z">
+<meta property="article:modified_time" content="2020-04-24T11:27:18.035Z">
 <meta property="article:author" content="Maxin">
+<meta property="article:tag" content="算法笔记">
 <meta name="twitter:card" content="summary">
 
 
@@ -114,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/04/24/bfs笔记/"/>
 
 
 
 
 
-  <title>MX蒟蒻的博客</title>
+  <title>bfs笔记 | MX蒟蒻的博客</title>
   
 
 
@@ -139,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -223,9 +227,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -255,9 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/24/bfs%E7%AC%94%E8%AE%B0/" itemprop="url">bfs笔记</a></h1>
+          <h1 class="post-title" itemprop="name headline">bfs笔记</h1>
         
 
         <div class="post-meta">
@@ -307,16 +309,12 @@
       
 
       
-        
-          
-            <p>bfs，<a href="https://baike.baidu.com/item/%E5%AE%BD%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/5224802?fromtitle=%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2&fromid=2148012&fr=aladdin" target="_blank" rel="noopener">广度优先搜索</a>，也叫宽搜，如其名，他是由宽度进行搜索（即每次都尝试访问同一层的节点。 一层访问完了，就访问下一层。）一般为二叉树的模型进行搜索，一般将起点压入一个队列中，对它所能触及的点进行判断是否合法，如果合法，记录为已访问过了（一般由bool数组vis[]进行记录）直到找到了我们所要访问的点，或整棵树全部查找完，未发现所要查找的点，结束。<br>由于bfs题目的多样，无法给出模板，直接看题！<br>洛谷<a href="https://www.luogu.com.cn/problem/P1135" target="_blank" rel="noopener">P1135 奇怪的电梯</a><br>这道题虽然有多种方法，但很明显是可以用bfs写出来的。这道题目的bfs思路是很清晰的，直接上代码！</p>
+        <p>bfs，<a href="https://baike.baidu.com/item/%E5%AE%BD%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/5224802?fromtitle=%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2&fromid=2148012&fr=aladdin" target="_blank" rel="noopener">广度优先搜索</a>，也叫宽搜，如其名，他是由宽度进行搜索（即每次都尝试访问同一层的节点。 一层访问完了，就访问下一层。）一般为二叉树的模型进行搜索，一般将起点压入一个队列中，对它所能触及的点进行判断是否合法，如果合法，记录为已访问过了（一般由bool数组vis[]进行记录）直到找到了我们所要访问的点，或整棵树全部查找完，未发现所要查找的点，结束。<br>由于bfs题目的多样，无法给出模板，直接看题！<br>洛谷<a href="https://www.luogu.com.cn/problem/P1135" target="_blank" rel="noopener">P1135 奇怪的电梯</a><br>这道题虽然有多种方法，但很明显是可以用bfs写出来的。这道题目的bfs思路是很清晰的，直接上代码！</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">100005</span>];<span class="comment">//记录是否访问过 </span></span><br><span class="line"><span class="keyword">bool</span> f=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> nexf[<span class="number">100005</span>];<span class="comment">//每一个楼层的数字 </span></span><br><span class="line"><span class="keyword">int</span> up,down;<span class="comment">//分别为向上和向下层数的记录 </span></span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;q1;</span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;q2;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span> st,<span class="keyword">int</span> end)</span><span class="comment">//此处st为开始楼层，end位所要找的层数 </span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line">	q1.push(st);<span class="comment">//压入开始楼层 </span></span><br><span class="line">	q2.push(<span class="number">0</span>);<span class="comment">//此处压入0为不让队列为空 </span></span><br><span class="line">	<span class="keyword">while</span>(!q1.empty())<span class="comment">// 循环直到队列为空 </span></span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> nfloor=q1.front();<span class="comment">//当前楼层记录 </span></span><br><span class="line">		q1.pop();</span><br><span class="line">		<span class="keyword">if</span>(nfloor==end)<span class="comment">//找到以后直接return打断 </span></span><br><span class="line">		&#123;</span><br><span class="line">			f=<span class="number">1</span>; </span><br><span class="line">			<span class="keyword">return</span>;<span class="comment">//f赋值为1，输出个人建议这样写，否则队列输出会有问题 </span></span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">			</span><br><span class="line">		up=nfloor+nexf[nfloor];<span class="comment">//向上楼层记录 </span></span><br><span class="line">		down=nfloor-nexf[nfloor];<span class="comment">//向下楼层记录 </span></span><br><span class="line">		<span class="keyword">if</span>(vis[up]==<span class="number">0</span>&amp;&amp;up&lt;=end)<span class="comment">//判断能否上升 </span></span><br><span class="line">		&#123;</span><br><span class="line">			q1.push(up);<span class="comment">//将之后楼层压入队列，即为更新数据 </span></span><br><span class="line">			q2.push(q2.front()+<span class="number">1</span>);<span class="comment">//记录按键次数 </span></span><br><span class="line">			vis[up]=<span class="number">1</span>;<span class="comment">//记录已访问过 </span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(vis[down]==<span class="number">0</span>&amp;&amp;down&gt;=<span class="number">1</span>)<span class="comment">//判断是否能下降 </span></span><br><span class="line">		&#123;</span><br><span class="line">			q1.push(down);</span><br><span class="line">			q2.push(q2.front()+<span class="number">1</span>);</span><br><span class="line">			</span><br><span class="line">			vis[down]=<span class="number">1</span>;</span><br><span class="line">		&#125;<span class="comment">//这里所有步骤同上（除第一步为记录下降楼层） </span></span><br><span class="line">		q2.pop();<span class="comment">//因为是更新，则旧的直接弹出 </span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>; <span class="comment">//没有找到，直接return，输出由f掌控。 </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,x,y;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;x&gt;&gt;y;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;nexf[i];</span><br><span class="line">	&#125;<span class="comment">//输入 </span></span><br><span class="line">	bfs(x,y);<span class="comment">//进入宽搜 </span></span><br><span class="line">	<span class="keyword">if</span>(f==<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;q2.front();</span><br><span class="line">	&#125;<span class="comment">//判断f输出 </span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这道题目bfs的思路比较明确，但下面一题就有些模糊：<br><a href="https://www.luogu.com.cn/problem/P1162" target="_blank" rel="noopener">P1162 填涂颜色</a><br>但仔细想一想，还是能想出来的。<br>这道题的思路是遍历每一个在1包围之外的0，然后将访问记录（即vis[]），最后进行判定（整个数组一个个判定，只要是为访问过的元素并为0，则输出2，其他按原来的输出。<br>废话少说，上代码！</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> x[]=&#123;<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">0</span>&#125;;<span class="comment">//x轴四个方向 </span></span><br><span class="line"><span class="keyword">int</span> y[]=&#123;<span class="number">0</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">1</span>&#125;;<span class="comment">//y轴四个方向 </span></span><br><span class="line"><span class="keyword">int</span> mp[<span class="number">105</span>][<span class="number">105</span>];<span class="comment">//整张图</span></span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">105</span>][<span class="number">105</span>];<span class="comment">//判断有无访问的数组 </span></span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;qx;</span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;qy;<span class="comment">//两个队列用于搜索 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;mp[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;<span class="comment">//输入 </span></span><br><span class="line"></span><br><span class="line">	vis[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	qx.push(<span class="number">0</span>);</span><br><span class="line">	qy.push(<span class="number">0</span>);<span class="comment">//将0压入队列是为了能让while运作。 </span></span><br><span class="line">	<span class="keyword">while</span>(!qx.empty())<span class="comment">//bfs </span></span><br><span class="line">	&#123;</span><br><span class="line">	</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)<span class="comment">//四个方向进行搜索 </span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> nx=qx.front()+x[i];<span class="comment">//x轴方向，front为当前位置，加上x[i]是改变位置 </span></span><br><span class="line">			<span class="keyword">int</span> ny=qy.front()+y[i];<span class="comment">//同上 </span></span><br><span class="line">			<span class="keyword">if</span>(nx&gt;=<span class="number">0</span>&amp;&amp;nx&lt;=n+<span class="number">1</span>&amp;&amp;ny&gt;=<span class="number">0</span>&amp;&amp;ny&lt;=n+<span class="number">1</span>&amp;&amp;mp[nx][ny]==<span class="number">0</span>&amp;&amp;!vis[nx][ny])<span class="comment">//判断可否访问 </span></span><br><span class="line">			&#123;</span><br><span class="line">				qx.push(nx);<span class="comment">//将x压入队列，更新 </span></span><br><span class="line">				qy.push(ny);<span class="comment">//同上 </span></span><br><span class="line">				vis[nx][ny]=<span class="number">1</span>;<span class="comment">//访问过进行记录 </span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125; </span><br><span class="line">		qx.pop();<span class="comment">//因为是更新，所以旧的要弹出 </span></span><br><span class="line">		qy.pop();<span class="comment">//同上 </span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(mp[i][j]==<span class="number">0</span>&amp;&amp;vis[i][j]==<span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="number">2</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;mp[i][j];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;<span class="comment">//输出 </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>最后给大家介绍一下我宅家时的<a href="https://space.bilibili.com/13480594?spm_id_from=333.788.b_765f7570696e666f.1" target="_blank" rel="noopener">学习资源</a>（<strong>B站是万能的</strong>）</p>
 
-          
-        
       
     </div>
     
@@ -331,267 +329,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/23/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Maxin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MX蒟蒻的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/23/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/" itemprop="url">费马小定理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-23T21:44:01+08:00">
-                2020-04-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" rel="tag"># 算法笔记</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="费马小定理！"><a href="#费马小定理！" class="headerlink" title="费马小定理！"></a>费马小定理！</h2><p>设p为素数，p$\nmid$a<br>$a^{p-1}\equiv 1\pmod{p}$</p>
-<p>用整除的定义就可以得出以下很常用性质：</p>
-<ol>
-<li>如果a$\mid$b,那么a$\mid$(-b),同理如果a$\mid$b,那么(-a)$\mid$b,另外两种同理可得.</li>
-<li>如果a$\mid$b,b$\mid$c,那么a$\mid$c,说明整除有传递性.</li>
-<li>如果a$\mid$b,a$\mid$c,则任意整数x,y都符合a$\mid$bx+by=1<h4 id="证明："><a href="#证明：" class="headerlink" title="证明："></a>证明：</h4>设质数p，我们取不为p倍数的数a。<br>构造一个序列：A={1，2，3$\ldots$，p-1},这个序列的性质：<br>$\prod_{i=1}^nA_i\equiv\prod_{i=1}^n(A_i\times a)\pmod{p}$</li>
-</ol>
-<p>证明：<br>因为$$\forall_{1 \le i \le p-1}\gcd(A_i,p)=1,\gcd(a,p)=1$$<br>所以$$\forall_{1 \le i \le p-1}\gcd(A_i\times a,p)=1$$<br>因为每一个$$A_i\times a\pmod{p}$$都是唯一的，可得<br>$$\forall_{1 \le i,j \le p-1,i\not = j}A_i \times a \not \equiv A_j \times a \pmod{p}$$<br>而且每一个$$A_i\times a \pmod{p}$$都对应了一个$$A_j(1 \le j \le p-1)$$<br>把式子稍加整理：<br>$$a^{p-1}\times f \equiv f \pmod{p}$$<br>两边同时乘$\frac{1}{f}$,得<br>$$a^{p-1} \equiv 1 \pmod{p}$$<br>证毕。<br>注：本文一部分摘自<a href="[https://oi-wiki.org/](https://oi-wiki.org/)">OI Wiki</a><br>#<del>好毒瘤qwq</del></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/22/dfs%E7%AC%94%E8%AE%B0qwq/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Maxin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MX蒟蒻的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/22/dfs%E7%AC%94%E8%AE%B0qwq/" itemprop="url">dfs笔记qwq</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-22T18:29:43+08:00">
-                2020-04-22
-              </time>
+              <a href="/2020/04/23/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/" rel="next" title="费马小定理">
+                <i class="fa fa-chevron-left"></i> 费马小定理
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>做个笔记qwq；<br>首先，学习dfs和bfs（<del>学不会要被老师抽死</del> ） qwq；<br>dfs，<a href="https://baike.baidu.com/item/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2" target="_blank" rel="noopener">深度优先搜索</a>，<del>毒瘤</del> ，就是遍历每个节点，直到结尾，<a href="https://baike.baidu.com/item/%E5%9B%9E%E6%BA%AF/23724802#5" target="_blank" rel="noopener">回溯</a>，接着遍历（每个节点只能遍历一次）；<br>回溯珂以选择递归实现；<br>需要辅助数组帮忙记录是否访问过此节点；<br>优点:可以枚举所有的可到达目标的路径；</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> dfs（状态A）</span><br><span class="line">&#123;</span><br><span class="line">		<span class="keyword">if</span>（A不合法）</span><br><span class="line">			<span class="keyword">return</span>；</span><br><span class="line">		<span class="keyword">if</span>（A为状态目标）</span><br><span class="line">			输出；</span><br><span class="line">		<span class="keyword">if</span>（A不为目标状态）</span><br><span class="line">			dfs（A+*）；<span class="comment">//递归调用；</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>经过<del>各种资料查找</del> ，终于把入门题全排列做出来了</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">200</span>];<span class="comment">//辅助数组</span></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">1005</span>];<span class="comment">//此数组是记录到达某节点所得的数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">out</span><span class="params">()</span><span class="comment">//输出自定义函数；</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;setw(<span class="number">5</span>)&lt;&lt;a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span><span class="comment">//深搜函数</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x&gt;n)</span><br><span class="line">	&#123;</span><br><span class="line">		out();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(vis[i]!=<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			a[x]=i;</span><br><span class="line">			vis[i]=<span class="number">1</span>;</span><br><span class="line">			dfs(x+<span class="number">1</span>);</span><br><span class="line">			vis[i]=<span class="number">0</span>;<span class="comment">//这里的代码是防止出现全排列只输出一组数据，具体情况自己思考</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	dfs(<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -601,10 +368,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -612,6 +380,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -817,6 +589,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
