@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="算法笔记," />
+  <meta name="keywords" content="数据结构," />
 
 
 
@@ -79,17 +79,22 @@
 
 
 
-<meta name="description" content="做个笔记qwq；首先，学习dfs和bfs（学不会要被老师抽死 ） qwq；dfs，深度优先搜索，毒瘤 ，就是遍历每个节点，直到结尾，回溯，接着遍历（每个节点只能遍历一次）；回溯珂以选择递归实现；需要辅助数组帮忙记录是否访问过此节点；优点:可以枚举所有的可到达目标的路径； 123456789void dfs（状态A）&amp;#123;		if（A不合法）			return；		if（A为状态目标）			输">
+<meta name="description" content="众所周知，二叉树很毒瘤今天。本蒟蒻就van，了解一下二叉树。首先从最基础得二叉树遍历开始二叉树的遍历分为三种：  先序遍历 中序遍历 后序遍历先序遍历和后序遍历没有什么好讲的，看看样例就会。但是中序遍历是个很毒瘤的 东西。这次我会讲解一个比较好用的小技巧。首先给出题目（LightningUZ大佬提供）大家仔细想一想，在纸上做一下   接下来给出答案：先序：1 2 3 4 5 7 8 6 9 10">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dfs笔记qwq">
-<meta property="og:url" content="http://yoursite.com/2020/04/22/dfs%E7%AC%94%E8%AE%B0qwq/index.html">
+<meta property="og:title" content="二叉树遍历笔记">
+<meta property="og:url" content="http://yoursite.com/2020/04/27/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="MX蒟蒻的博客">
-<meta property="og:description" content="做个笔记qwq；首先，学习dfs和bfs（学不会要被老师抽死 ） qwq；dfs，深度优先搜索，毒瘤 ，就是遍历每个节点，直到结尾，回溯，接着遍历（每个节点只能遍历一次）；回溯珂以选择递归实现；需要辅助数组帮忙记录是否访问过此节点；优点:可以枚举所有的可到达目标的路径； 123456789void dfs（状态A）&amp;#123;		if（A不合法）			return；		if（A为状态目标）			输">
-<meta property="article:published_time" content="2020-04-22T10:29:43.000Z">
-<meta property="article:modified_time" content="2020-04-22T10:41:11.807Z">
+<meta property="og:description" content="众所周知，二叉树很毒瘤今天。本蒟蒻就van，了解一下二叉树。首先从最基础得二叉树遍历开始二叉树的遍历分为三种：  先序遍历 中序遍历 后序遍历先序遍历和后序遍历没有什么好讲的，看看样例就会。但是中序遍历是个很毒瘤的 东西。这次我会讲解一个比较好用的小技巧。首先给出题目（LightningUZ大佬提供）大家仔细想一想，在纸上做一下   接下来给出答案：先序：1 2 3 4 5 7 8 6 9 10">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200330001105239.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21heGluNjY2NjY2NjY=,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200330001309372.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21heGluNjY2NjY2NjY=,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200330071700652.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21heGluNjY2NjY2NjY=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200330071646930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21heGluNjY2NjY2NjY=,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-04-27T13:57:48.000Z">
+<meta property="article:modified_time" content="2020-04-27T13:58:40.927Z">
 <meta property="article:author" content="Maxin">
-<meta property="article:tag" content="算法笔记">
+<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200330001105239.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21heGluNjY2NjY2NjY=,size_16,color_FFFFFF,t_70#pic_center">
 
 
 
@@ -119,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/04/22/dfs笔记qwq/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/04/27/二叉树遍历笔记/"/>
 
 
 
 
 
-  <title>dfs笔记qwq | MX蒟蒻的博客</title>
+  <title>二叉树遍历笔记 | MX蒟蒻的博客</title>
   
 
 
@@ -242,7 +247,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/22/dfs%E7%AC%94%E8%AE%B0qwq/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/27/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Maxin">
@@ -259,7 +264,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">dfs笔记qwq</h1>
+          <h1 class="post-title" itemprop="name headline">二叉树遍历笔记</h1>
         
 
         <div class="post-meta">
@@ -271,8 +276,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-22T18:29:43+08:00">
-                2020-04-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-27T21:57:48+08:00">
+                2020-04-27
               </time>
             
 
@@ -309,13 +314,14 @@
       
 
       
-        <p>做个笔记qwq；<br>首先，学习dfs和bfs（<del>学不会要被老师抽死</del> ） qwq；<br>dfs，<a href="https://baike.baidu.com/item/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2" target="_blank" rel="noopener">深度优先搜索</a>，<del>毒瘤</del> ，就是遍历每个节点，直到结尾，<a href="https://baike.baidu.com/item/%E5%9B%9E%E6%BA%AF/23724802#5" target="_blank" rel="noopener">回溯</a>，接着遍历（每个节点只能遍历一次）；<br>回溯珂以选择递归实现；<br>需要辅助数组帮忙记录是否访问过此节点；<br>优点:可以枚举所有的可到达目标的路径；</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> dfs（状态A）</span><br><span class="line">&#123;</span><br><span class="line">		<span class="keyword">if</span>（A不合法）</span><br><span class="line">			<span class="keyword">return</span>；</span><br><span class="line">		<span class="keyword">if</span>（A为状态目标）</span><br><span class="line">			输出；</span><br><span class="line">		<span class="keyword">if</span>（A不为目标状态）</span><br><span class="line">			dfs（A+*）；<span class="comment">//递归调用；</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>经过<del>各种资料查找</del> ，终于把入门题全排列做出来了</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">200</span>];<span class="comment">//辅助数组</span></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">1005</span>];<span class="comment">//此数组是记录到达某节点所得的数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">out</span><span class="params">()</span><span class="comment">//输出自定义函数；</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;setw(<span class="number">5</span>)&lt;&lt;a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span><span class="comment">//深搜函数</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x&gt;n)</span><br><span class="line">	&#123;</span><br><span class="line">		out();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(vis[i]!=<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			a[x]=i;</span><br><span class="line">			vis[i]=<span class="number">1</span>;</span><br><span class="line">			dfs(x+<span class="number">1</span>);</span><br><span class="line">			vis[i]=<span class="number">0</span>;<span class="comment">//这里的代码是防止出现全排列只输出一组数据，具体情况自己思考</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	dfs(<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
+        <p>众所周知，<del>二叉树很毒瘤</del><br>今天。本蒟蒻就<del>van</del>，了解一下二叉树。<br>首先从最基础得二叉树遍历开始<br>二叉树的遍历分为三种：</p>
+<ol>
+<li>先序遍历</li>
+<li>中序遍历</li>
+<li>后序遍历<br>先序遍历和后序遍历没有什么好讲的，看看样例就会。但是中序遍历是个<del>很毒瘤的</del> 东西。<br>这次我会讲解一个比较好用的小技巧。<br>首先给出题目（LightningUZ大佬提供）<br><img src="https://img-blog.csdnimg.cn/20200330001105239.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21heGluNjY2NjY2NjY=,size_16,color_FFFFFF,t_70#pic_center" alt="毒瘤的二叉树遍历题目"><br>大家仔细想一想，在纸上做一下</li>
+</ol>
+<hr>
+<p><img src="https://img-blog.csdnimg.cn/20200330001309372.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21heGluNjY2NjY2NjY=,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>接下来给出答案：<br>先序：1 2 3 4 5 7 8 6 9 10 11 12 13 14 16 17 15 18<br>中序：3 2 7 5 8 4 9 6 11 10 12 1 16 14 17 13 15 18<br>后序：3 7 8 5 9 11 12 10 6 4 2 16 17 14 18 15 13 1<br>先序大家应该能理解，这里我就讲解一下中序和后序。<br>后序：这里我们就要用到一个小技巧：找最深的左儿子<br>例如此图：遍历根节点的左儿子时，一路遍历左儿子（不要右拐），直到到节点‘3’无法再遍历左儿子时，则输出3，这时我们直接忽略掉节点‘3’，再次回到回到节点2，遍历节点2的右儿子，再次一直遍历左儿子，直到节点7，无法再遍历，输出7，然后忽略节点7，回到节点5，遍历右儿子，我们发现遍历右儿子节点8时无法遍历任何节点了，则输出8，回到节点5，忽略节点8。因为我们已经忽略了节点7和节点8，所以我们无法在节点5继续遍历，则输出5，回到节点4，然后继续遍历右儿子，以此类推（这里建议大家图片和文字一起看，不然会有些迷糊），这里和布尔数组vis[]有异曲同工之妙。<br>中序遍历时最毒瘤的：和后序一样，我们仍然需要用到“找最深左儿子”的技巧，但是和它不同的是，它要多加一步：回到上一深度的节点时，直接把上一深度节点输出。<br>如此图：仍然时遍历到节点3时输出3，回到节点2，但此处直接输出2，然后屏蔽掉节点2（即之后不再输出2）其他的同上，比如我们遍历到了节点7，输出7，然后回到节点5，这时输出5，然后遍历8，输出8，之后直接跳过输出5（因为已经屏蔽了），之后回到4，一样，输出4，之后继续遍历，以此类推。<br>这是我在大佬LightningUZ的指导下摸索出来的一个小技巧（<strong>感谢！</strong>），可能有些混乱，请大家图文结合，反复观看！当你看懂了，则就掌握了！<br>接下来给大家出两道题目，大家可以先思考！<br>如果哪里不对，请善意指出（别喷啊）<br>欢迎各位dalao留言！<br>题目1<br><img src="https://img-blog.csdnimg.cn/20200330071700652.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21heGluNjY2NjY2NjY=,size_16,color_FFFFFF,t_70" alt=""><br>题目2<br><img src="https://img-blog.csdnimg.cn/20200330071646930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21heGluNjY2NjY2NjY=,size_16,color_FFFFFF,t_70" alt=""></p>
 
       
     </div>
@@ -333,7 +339,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" rel="tag"># 算法笔记</a>
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
           
         </div>
       
@@ -346,14 +352,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/04/24/bfs%E7%AC%94%E8%AE%B0/" rel="next" title="bfs笔记">
+                <i class="fa fa-chevron-left"></i> bfs笔记
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/23/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/" rel="prev" title="费马小定理">
-                费马小定理 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/27/%E6%95%B0%E8%AE%BA%EF%BC%88%E6%95%B0%E5%AD%A6%EF%BC%89%E5%9F%BA%E7%A1%80/" rel="prev" title="数论（数学）基础">
+                数论（数学）基础 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
